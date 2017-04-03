@@ -1,0 +1,18 @@
+body {
+    background-image: url(../images/background.jpg);
+    background-repeat: repeat;
+}
+
+.coloring {
+    color: white;
+}
+#footerContainer {
+  position: fixed;
+    bottom:0;
+}
+
+#admin {
+  margin-top: 32px;
+  margin-left: 60px;
+
+}

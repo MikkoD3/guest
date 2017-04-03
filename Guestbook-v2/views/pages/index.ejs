@@ -1,0 +1,41 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <link href="pages/css/style.css" rel="stylesheet" type="text/css" />
+    <link href="pages/css/mycss.css" rel="stylesheet" type="text/css" />
+  <script
+  src="http://code.jquery.com/jquery-3.1.1.js"
+  integrity="sha256-16cdPddA6VdVInumRGo6IbivbERE8p7CQR3HzTBuELA="
+  crossorigin="anonymous"></script>
+  <% include ../partials/head %>
+</head>
+
+<body>
+<div id="wrapper">
+   <% include ../partials/header %>
+   <div id="contant">
+    <div class="contant_1">
+	<div class="contant_1_left">
+
+	  <img src="pages/images/books.jpg" width="277" height="266" alt="" style="border: 3px solid grey"/>
+	  <h3><%= new_heading %></h3>
+	  <br class="clear bottomClear" />
+    <div class="panel panel-info">
+      <blockquote>
+	  <p><%=new_paragraph %></p>
+      <p><em><%= new_author %></em></p>
+    </blockquote>
+
+    </div>
+	  </div>
+    <a href="/admin" role="button" id="admin" class="btn btn-warning btn-lg"><span class="glyphicon glyphicon-console"></span>&nbsp;&nbsp;&nbsp;&nbsp;Admin Site</a>
+</div>
+</div>
+
+
+</div>
+    <div id="footerContainer">
+    <% include ../partials/footer %>
+   </div>
+</body>
+</html>

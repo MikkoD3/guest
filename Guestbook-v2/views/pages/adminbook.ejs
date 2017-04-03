@@ -1,0 +1,52 @@
+<html>
+<title>Guestbook Admin </title>
+<head>
+  <link href="pages/css/mycss.css" rel="stylesheet" type="text/css" />
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+<script
+src="http://code.jquery.com/jquery-3.1.1.js"
+integrity="sha256-16cdPddA6VdVInumRGo6IbivbERE8p7CQR3HzTBuELA="
+crossorigin="anonymous"></script>
+<link href="pages/css/mycss.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+  <script src="/pages/js/main.js"></script>
+<div class="panel panel-info">
+<div class="panel-heading">
+<h1 style="text-align: center;">Guestbook - Admin</h1>
+</div>
+</div>
+<div class="btn-group" role="group">
+
+<a role="button" class="btn btn-warning btn-lg" href="/">Homepage</a>
+</div>
+<br>
+<br>
+<br>
+<div id="tabledata">
+  <table class="table table-bordered">
+    <tr class="active">
+      <th>Guest Number</th>
+      <th>Username</th>
+      <th>Country</th>
+      <th>message</th>
+      <th>Date</th>
+      <th>Delete</th>
+    </tr>
+    <tr class="active">
+       <% for (var i=0; i < guests.length; i++) { %>
+          <td class="active"><%= guests[i].guestnumber %></td>
+          <td class="active"><%= guests[i].username %></td>
+          <td class="active"><%= guests[i].country %></td>
+          <td class="active"><%= guests[i].message %></td>
+          <td class="active"><%= guests[i].date %></td>
+          <td class="active"><button type="button" class="btn btn-danger" id="delete" onclick="myFunction(<%= guests[i].guestnumber %>)" data-value="<% guests[i].guestnumber %>">Remove Message</button></td>
+        </tr>
+       <% } %>
+
+  </table>
+</div>
+
+
+</body>
+</html>
